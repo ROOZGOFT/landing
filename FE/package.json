@@ -1,8 +1,8 @@
 {
-  "name": "landing",
-  "version": "0.0.1",
-  "description": "RoozGofts landing",
-  "productName": "landing",
+  "name": "roozgoft",
+  "version": "0.0.2",
+  "description": "RoozGofts RoozGoft",
+  "productName": "RoozGoft",
   "author": "Alireza Hatami <itshatami@gmail.com>",
   "private": true,
   "scripts": {

@@ -4,13 +4,15 @@
       <div class="col-8 q-mx-auto q-mt-xl">
         <!-- showcase -->
         <div id="showcase" class="row items-center">
-          <div class=" col-12 col-md-6 q-gutter-y-xl">
-            <q-img :src="url" spinner-color="white" style="max-width: 350px;" />
-            <q-img :src="group" spinner-color="white" style="max-width: 350px;" />
+          <div class=" col-12 col-md-6 q-gutter-y-xl logo">
+            <q-img :src="url" spinner-color="white" style="max-width: 350px;filter: drop-shadow(0px 0px 5px #077fde);" />
+            <!-- <q-img :src="group" spinner-color="white" style="max-width: 350px;" /> -->
           </div>
-          <div class=" col-12 col-md-6 kalameh text-white items-center" style="direction: rtl;">
-            <h1>روزگفت</h1>
-            <p class="text-body1">سلام! خوش آمدید به "روزگفت"، یک سرویس تخصصی در زمینه سلامت روان و بهبود کیفیت زندگی.
+          <div class="col-12 col-md-6 q-mx-auto kalameh text-white items-center text-center">
+            <div class="title-container">
+              <h1>روزگفت</h1>
+            </div>
+            <p class="text-body1" style="text-align: justify; direction: rtl;">سلام! خوش آمدید به "روزگفت"، یک سرویس تخصصی در زمینه سلامت روان و بهبود کیفیت زندگی.
               "روزگفت" به عنوان یک
               منبع کامل و معتبر برای اطلاعات، منابع و مشاوره‌های مرتبط با سلامت روان شما طراحی شده است تا به شما در مسیر
               بهتر شدن و بهبود دادن سلامت روانتان یاری رساند.</p>
@@ -21,14 +23,14 @@
           <div class="col-12 col-md-6">
             <div class="">
               <div class="flex justify-center q-my-md" style="border: 1px ; border-radius:100px;text-align: center;">
-               <video id="video" controls>
+               <video id="video" controls style="width: 400px; border-radius: 10px;">
                 <source src="intro.mp4" type="video/mp4">
                </video>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 q-gutter-y-lg" style="direction: rtl;">
-            <h1 class="text-h4">چرا روزگفت؟</h1>
+            <h1 class="text-h4 q-my-xl">چرا <span style="color: #077fde; filter: drop-shadow( 0px 0px 1px #077fde);">روزگفت؟</span></h1>
             <p class="text-body1">
               سلامت روان از اهمیت بسیاری برخوردار است و بر روی کیفیت زندگی ما تاثیر می‌گذارد. با این وجود، اغلب افراد
               نیازمند
@@ -37,13 +39,13 @@
           </div>
         </div>
         <!-- roudmaps -->
-        <div class="q-mx-auto q-my-xl">
-          <h1 class="text-h4 text-white kalameh text-center">نقشه های بهبودی</h1>
+        <div class="q-my-xl">
+          <h1 class="text-h4 text-white kalameh text-center" style="margin-bottom: 70px;">نقشه های بهبودی</h1>
           <div class="row kalameh q-col-gutter-md justify-center">
 
-            <div class="col-12 col-sm-3">
-              <q-card class="my-card text-yellow-11 text-center"
-                style="background-color: #27220B;  box-shadow: 0px 0px 5px 1px #fce9b589;">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <q-card class="my-card text-yellow-11 text-center "
+                style="background-color: #27220B;  box-shadow: 0px 0px 5px 1px #fce9b589;border-radius: 20px;">
                 <div>
                   <img src="meditation.png">
                 </div>
@@ -54,9 +56,9 @@
               </q-card>
             </div>
 
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
               <q-card class="my-card text-center"
-                style="color: #A2C6DB;background-color: #222A2F;  box-shadow: 0px 0px 5px 1px #579abc76;">
+                style="color: #A2C6DB;background-color: #222A2F;  box-shadow: 0px 0px 5px 1px #579abc76;border-radius: 20px;">
                 <div>
                   <img src="depression.png">
                 </div>
@@ -67,9 +69,9 @@
               </q-card>
             </div>
 
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
               <q-card class="my-card text-center"
-                style="color: #BDADD3;background-color: #2b283175;box-shadow: 0px 0px 5px 1px #7A5DA6;">
+                style="color: #BDADD3;background-color: #2b283175;box-shadow: 0px 0px 5px 1px #7A5DA6;border-radius: 20px;">
                 <div>
                   <img src="anxiety.png">
                 </div>
@@ -80,9 +82,9 @@
               </q-card>
             </div>
 
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
               <q-card class="my-card text-center"
-                style="color: #FEA9B2;background-color: #332326;box-shadow: 0px 0px 5px 1px rgba(122, 93, 166, 0.667);">
+                style="color: #FEA9B2;background-color: #332326;box-shadow: 0px 0px 5px 1px rgba(122, 93, 166, 0.667);border-radius: 20px">
                 <div>
                   <img src="adhd.png">
                 </div>
@@ -141,7 +143,7 @@
 
         <!-- footer -->
         <div class="q-my-xl text-center kalameh text-white">
-          <h6>تمامی حقوق وبسایت متعلق به روزگفت می باشد.</h6>
+          <h6 class="" style="font-size: 15px; color: gray;">تمامی حقوق وبسایت متعلق به روزگفت می باشد.</h6>
         </div>
       </div>
     </div>
@@ -156,7 +158,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'IndexPage',
   setup() {
-    const url = 'logo.png';
+    const url = 'showcase.png';
     const group = 'group.png'
     return { url, group }
   }
