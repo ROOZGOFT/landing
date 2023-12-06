@@ -6,7 +6,6 @@
         <div id="showcase" class="row items-center">
           <div class=" col-12 col-md-6 q-gutter-y-xl logo">
             <q-img :src="url" spinner-color="white" style="max-width: 350px;filter: drop-shadow(0px 0px 5px #077fde);" />
-            <!-- <q-img :src="group" spinner-color="white" style="max-width: 350px;" /> -->
           </div>
           <div class="col-12 col-md-6 q-mx-auto kalameh text-white items-center" style="direction: rtl;">
             <div class="title-container">
@@ -147,7 +146,9 @@
         <div class="q-my-xl text-center kalameh text-white">
 
           <div class=" q-mx-auto q-pa-lg" style="max-width: 400px;">
-            <q-input class=" text-white q-my-sm" bg-color="orange" v-model="mobile" label="moblie" outlined/>
+            <q-input type="tel" class=" text-white q-my-sm" bg-color="orange" v-model="mobile" label="moblie" outlined
+              ref="mobileRef"
+              :rules="[val => !!val || 'Field is required', val => typeof (val) == integer || 'حروف قبول نیست', val => val.length == 10 || 'شماره موبایل اشتباهه']" />
             <q-btn @click="Send" label="ثبت نام" />
           </div>
 
@@ -168,32 +169,49 @@ import { useQuasar } from "quasar";
 export default defineComponent({
   name: 'IndexPage',
   setup() {
-    const url = 'showcase.png';
-    const group = 'group.png'
-    const mobile = ref('');
     const q = useQuasar()
-    function Send(){
-      api.post('pre-register' , {
+    const url = 'showcase.png';
+    const mobile = ref('');
+    const mobileRef = ref(null)
+    function Send() {
+      mobileRef.value.validate()
+      if (mobileRef.value.hasError) {
+        q.notify({
+          message: 'شماره موبایل نادرست وارد شده',
+          position: 'top',
+          color: 'red'
+        })
+      }else{
+         api.post('api/pre-register', {
         mobile: mobile.value
-      }).then(res=>{
+      }).then(res => {
         console.log(res.data);
-        if(res.data.status){
+        if (res.data.status) {
           q.notify({
-            message:'پیش ثبت نام با موفقیت انجام شد',
-            color:'green',
-            position:'top'
+            message: 'پیش ثبت نام با موفقیت انجام شد',
+            color: 'green',
+            position: 'top'
+          })
+        } else {
+          q.notify({
+            message: res.data.message,
+            color: 'yellow',
+            position: 'top'
           })
         }
-      }).catch(err =>{
+      }).catch(err => {
         console.log(err);
-        q.notify({
-          message:'ارور',
-          color:'red'
-        })
+        if (err)
+          q.notify({
+            message: 'ارور',
+            color: 'red'
+          })
       })
+      }
+     
     }
 
-    return { url, group , mobile , Send }
+    return { url, mobile, Send, mobileRef }
   }
 })
 </script>

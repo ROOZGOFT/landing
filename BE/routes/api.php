@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\PreController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\PreRegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/pre-register', [PreController::class , 'index']);
