@@ -11,7 +11,8 @@
             <div class="title-container kalameh">
               <h1 style="font-weight: 600;">روزگفت</h1>
             </div>
-            <p class="text-body1 iransans" style="text-align: justify; direction: rtl;">سلام! خوش آمدید به "روزگفت"، یک سرویس تخصصی
+            <p class="text-body1 iransans" style="text-align: justify; direction: rtl;">سلام! خوش آمدید به "روزگفت"، یک
+              سرویس تخصصی
               در زمینه سلامت روان و بهبود کیفیت زندگی.
               "روزگفت" به عنوان یک
               منبع کامل و معتبر برای اطلاعات، منابع و مشاوره‌های مرتبط با سلامت روان شما طراحی شده است تا به شما در مسیر
@@ -22,7 +23,8 @@
         <div id="whyroozgoft" class="row text-white items-center q-mb-xl" style="margin-top: 100px;">
           <div class="col-12 col-md-6">
             <div>
-              <div class="flex  justify-md-end justify-xs-center q-my-md" style="border: 1px ; border-radius:100px;text-align: center;">
+              <div class="flex  justify-md-end justify-xs-center q-my-md"
+                style="border: 1px ; border-radius:100px;text-align: center;">
                 <video id="video" controls style="width: 400px; border-radius: 10px;">
                   <source src="intro.mp4" type="video/mp4">
                 </video>
@@ -38,7 +40,8 @@
         </div>
         <!-- roudmaps -->
         <div class="q-my-xl">
-          <h1 class="text-h4 text-white kalameh text-center" style="margin-bottom: 70px; font-weight: 600;">نقشه های بهبودی</h1>
+          <h1 class="text-h4 text-white kalameh text-center" style="margin-bottom: 70px; font-weight: 600;">نقشه های
+            بهبودی</h1>
           <div class="row kalameh q-col-gutter-md justify-center">
 
             <div class="col-12 col-sm-6 col-lg-3">
@@ -96,8 +99,34 @@
           </div>
         </div>
 
-        <!-- comments -->
-        <!-- <div class="q-my-xl">
+       
+
+        <!-- برای چه کسانی مناسب است -->
+        <q-list bordered class="rounded-borders text-white kalameh" style="background-color: #1E1E1E;direction: rtl; border-radius: 15px;">
+          <q-expansion-item switch-toggle-side="left" expand-separator class="text-h6 q-pa-sm" label="برای چه کسانی مناسب است؟">
+            <q-card class="bg-dark">  
+              <q-card-section class="flex justify-between items-center">
+                <p class="q-mb-none">کسانی که...</p>
+                <img src="star.svg" alt="svg">
+              </q-card-section>
+            </q-card>
+            <q-card class="bg-dark">  
+              <q-card-section class="flex justify-between items-center">
+                <p class="q-mb-none">کسانی که...</p>
+                <img src="star.svg" alt="svg">
+              </q-card-section>
+            </q-card>
+            <q-card class="bg-dark">  
+              <q-card-section class="flex justify-between items-center">
+                <p class="q-mb-none">کسانی که...</p>
+                <img src="star.svg" alt="svg">
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+        </q-list>
+
+         <!-- comments -->
+        <div class="q-my-xl">
           <div>
             <h1 class="kalameh text-h4 text-center text-white q-my-xl" style="font-weight: 600;">تجربه کاربران</h1>
           </div>
@@ -137,7 +166,8 @@
               </q-card>
             </div>
           </div>
-        </div> -->
+        </div>
+
 
         <!-- footer -->
         <div class="q-my-xl text-center kalameh text-white">
@@ -145,7 +175,7 @@
           <div class=" q-mx-auto q-pa-lg" style="max-width: 400px;">
             <q-input type="tel" class=" text-white q-my-sm" bg-color="orange" v-model="mobile" label="moblie" outlined
               ref="mobileRef"
-              :rules="[val => !!val || 'Field is required', val => typeof (val) == integer || 'حروف قبول نیست', val => val.length == 10 || 'شماره موبایل اشتباهه']" />
+              :rules="[val => !!val || 'لطفا خالی نذار', val => val.length == 10 || 'شماره موبایل اشتباهه', val => typeof val === 'number' || 'لطفا فقط عدد وارد کن']" />
             <q-btn @click="Send" label="ثبت نام" />
           </div>
 
@@ -178,34 +208,34 @@ export default defineComponent({
           position: 'top',
           color: 'red'
         })
-      }else{
-         api.post('api/pre-register', {
-        mobile: mobile.value
-      }).then(res => {
-        console.log(res.data);
-        if (res.data.status) {
-          q.notify({
-            message: 'پیش ثبت نام با موفقیت انجام شد',
-            color: 'green',
-            position: 'top'
-          })
-        } else {
-          q.notify({
-            message: res.data.message,
-            color: 'yellow',
-            position: 'top'
-          })
-        }
-      }).catch(err => {
-        console.log(err);
-        if (err)
-          q.notify({
-            message: 'ارور',
-            color: 'red'
-          })
-      })
+      } else {
+        api.post('api/pre-register', {
+          mobile: mobile.value
+        }).then(res => {
+          console.log(res.data);
+          if (res.data.status) {
+            q.notify({
+              message: 'پیش ثبت نام با موفقیت انجام شد',
+              color: 'green',
+              position: 'top'
+            })
+          } else {
+            q.notify({
+              message: res.data.message,
+              color: 'yellow',
+              position: 'top'
+            })
+          }
+        }).catch(err => {
+          console.log(err);
+          if (err)
+            q.notify({
+              message: 'ارور',
+              color: 'red'
+            })
+        })
       }
-     
+
     }
 
     return { url, mobile, Send, mobileRef }
