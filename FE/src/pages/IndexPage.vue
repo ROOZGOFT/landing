@@ -22,7 +22,7 @@
         <div id="whyroozgoft" class="row text-white kalameh items-center q-mb-xl" style="margin-top: 100px;">
           <div class="col-12 col-md-6">
             <div class="">
-              <div class="flex justify-center q-my-md" style="border: 1px ; border-radius:100px;text-align: center;">
+              <div class="flex  justify-md-end justify-xs-center q-my-md" style="border: 1px ; border-radius:100px;text-align: center;">
                 <video id="video" controls style="width: 400px; border-radius: 10px;">
                   <source src="intro.mp4" type="video/mp4">
                 </video>
