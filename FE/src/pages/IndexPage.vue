@@ -7,11 +7,11 @@
           <div class=" col-12 col-md-6 q-gutter-y-xl logo">
             <q-img :src="url" spinner-color="white" style="max-width: 350px;filter: drop-shadow(0px 0px 5px #077fde);" />
           </div>
-          <div class="col-12 col-md-6 q-mx-auto kalameh text-white items-center" style="direction: rtl;">
-            <div class="title-container">
-              <h1>روزگفت</h1>
+          <div class="col-12 col-md-6 q-mx-auto text-white items-center" style="direction: rtl;">
+            <div class="title-container kalameh">
+              <h1 style="font-weight: 600;">روزگفت</h1>
             </div>
-            <p class="text-body1" style="text-align: justify; direction: rtl;">سلام! خوش آمدید به "روزگفت"، یک سرویس تخصصی
+            <p class="text-body1 iransans" style="text-align: justify; direction: rtl;">سلام! خوش آمدید به "روزگفت"، یک سرویس تخصصی
               در زمینه سلامت روان و بهبود کیفیت زندگی.
               "روزگفت" به عنوان یک
               منبع کامل و معتبر برای اطلاعات، منابع و مشاوره‌های مرتبط با سلامت روان شما طراحی شده است تا به شما در مسیر
@@ -19,9 +19,9 @@
           </div>
         </div>
         <!-- why roozgoft -->
-        <div id="whyroozgoft" class="row text-white kalameh items-center q-mb-xl" style="margin-top: 100px;">
+        <div id="whyroozgoft" class="row text-white items-center q-mb-xl" style="margin-top: 100px;">
           <div class="col-12 col-md-6">
-            <div class="">
+            <div>
               <div class="flex  justify-md-end justify-xs-center q-my-md" style="border: 1px ; border-radius:100px;text-align: center;">
                 <video id="video" controls style="width: 400px; border-radius: 10px;">
                   <source src="intro.mp4" type="video/mp4">
@@ -30,18 +30,15 @@
             </div>
           </div>
           <div class="col-12 col-md-6 q-gutter-y-lg" style="direction: rtl;">
-            <h1 class="text-h4 q-my-xl">چرا <span
-                style="color: #077fde; filter: drop-shadow( 0px 0px 1px #077fde);">روزگفت؟</span></h1>
-            <p class="text-body1">
-              سلامت روان از اهمیت بسیاری برخوردار است و بر روی کیفیت زندگی ما تاثیر می‌گذارد. با این وجود، اغلب افراد
-              نیازمند
-              راهنمایی و پشتیبانی در این زمینه هستند.
+            <h1 class="text-h4 q-my-xl kalameh" style="font-weight: 600;">ما اینجاییم تا حالتون رو بهتر کنیم</h1>
+            <p class="text-body1 iransans">
+              پلتفرم ما به شما و عزیزانتون کمک میکنه تا با سختی های زندگی دست مقابله کنید و ازشون جــــــلــــــو بزنید.
             </p>
           </div>
         </div>
         <!-- roudmaps -->
         <div class="q-my-xl">
-          <h1 class="text-h4 text-white kalameh text-center" style="margin-bottom: 70px;">نقشه های بهبودی</h1>
+          <h1 class="text-h4 text-white kalameh text-center" style="margin-bottom: 70px; font-weight: 600;">نقشه های بهبودی</h1>
           <div class="row kalameh q-col-gutter-md justify-center">
 
             <div class="col-12 col-sm-6 col-lg-3">
@@ -100,11 +97,11 @@
         </div>
 
         <!-- comments -->
-        <div class="q-my-xl">
+        <!-- <div class="q-my-xl">
           <div>
-            <h1 class="kalameh text-h4 text-center text-white q-my-xl">تجربه کاربران</h1>
+            <h1 class="kalameh text-h4 text-center text-white q-my-xl" style="font-weight: 600;">تجربه کاربران</h1>
           </div>
-          <div class="row kalameh q-gutter-md justify-center text-white" style="direction: rtl;">
+          <div class="row iransans q-gutter-md justify-center text-white" style="direction: rtl;">
 
             <div class="col-12 col-md-5 ">
               <q-card class="my-card text-body1 text-justify" style="background-color: #1E1E1E;">
@@ -140,7 +137,7 @@
               </q-card>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- footer -->
         <div class="q-my-xl text-center kalameh text-white">
