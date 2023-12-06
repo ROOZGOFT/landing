@@ -146,9 +146,9 @@
         <!-- footer -->
         <div class="q-my-xl text-center kalameh text-white">
 
-          <div>
-            <q-input v-model="mobile" />
-            <q-btn @click="Send">ثبت نام</q-btn>
+          <div class=" q-mx-auto q-pa-lg" style="max-width: 400px;">
+            <q-input class=" text-white q-my-sm" bg-color="orange" v-model="mobile" label="moblie" outlined/>
+            <q-btn @click="Send" label="ثبت نام" />
           </div>
 
           <h6 class="" style="font-size: 15px; color: gray;">تمامی حقوق وبسایت متعلق به روزگفت می باشد.</h6>
@@ -163,6 +163,7 @@
 <script>
 import { defineComponent, ref } from 'vue'
 import { api } from "src/boot/axios";
+import { useQuasar } from "quasar";
 
 export default defineComponent({
   name: 'IndexPage',
@@ -170,9 +171,26 @@ export default defineComponent({
     const url = 'showcase.png';
     const group = 'group.png'
     const mobile = ref('');
-
+    const q = useQuasar()
     function Send(){
-
+      api.post('pre-register' , {
+        mobile: mobile.value
+      }).then(res=>{
+        console.log(res.data);
+        if(res.data.status){
+          q.notify({
+            message:'پیش ثبت نام با موفقیت انجام شد',
+            color:'green',
+            position:'top'
+          })
+        }
+      }).catch(err =>{
+        console.log(err);
+        q.notify({
+          message:'ارور',
+          color:'red'
+        })
+      })
     }
 
     return { url, group , mobile , Send }
