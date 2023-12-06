@@ -8,11 +8,12 @@
             <q-img :src="url" spinner-color="white" style="max-width: 350px;filter: drop-shadow(0px 0px 5px #077fde);" />
             <!-- <q-img :src="group" spinner-color="white" style="max-width: 350px;" /> -->
           </div>
-          <div class="col-12 col-md-6 q-mx-auto kalameh text-white items-center text-center">
+          <div class="col-12 col-md-6 q-mx-auto kalameh text-white items-center" style="direction: rtl;">
             <div class="title-container">
               <h1>روزگفت</h1>
             </div>
-            <p class="text-body1" style="text-align: justify; direction: rtl;">سلام! خوش آمدید به "روزگفت"، یک سرویس تخصصی در زمینه سلامت روان و بهبود کیفیت زندگی.
+            <p class="text-body1" style="text-align: justify; direction: rtl;">سلام! خوش آمدید به "روزگفت"، یک سرویس تخصصی
+              در زمینه سلامت روان و بهبود کیفیت زندگی.
               "روزگفت" به عنوان یک
               منبع کامل و معتبر برای اطلاعات، منابع و مشاوره‌های مرتبط با سلامت روان شما طراحی شده است تا به شما در مسیر
               بهتر شدن و بهبود دادن سلامت روانتان یاری رساند.</p>
@@ -23,14 +24,15 @@
           <div class="col-12 col-md-6">
             <div class="">
               <div class="flex justify-center q-my-md" style="border: 1px ; border-radius:100px;text-align: center;">
-               <video id="video" controls style="width: 400px; border-radius: 10px;">
-                <source src="intro.mp4" type="video/mp4">
-               </video>
+                <video id="video" controls style="width: 400px; border-radius: 10px;">
+                  <source src="intro.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 q-gutter-y-lg" style="direction: rtl;">
-            <h1 class="text-h4 q-my-xl">چرا <span style="color: #077fde; filter: drop-shadow( 0px 0px 1px #077fde);">روزگفت؟</span></h1>
+            <h1 class="text-h4 q-my-xl">چرا <span
+                style="color: #077fde; filter: drop-shadow( 0px 0px 1px #077fde);">روزگفت؟</span></h1>
             <p class="text-body1">
               سلامت روان از اهمیت بسیاری برخوردار است و بر روی کیفیت زندگی ما تاثیر می‌گذارد. با این وجود، اغلب افراد
               نیازمند
@@ -101,37 +103,37 @@
         <!-- comments -->
         <div class="q-my-xl">
           <div>
-            <h1 class="kalameh text-h4 text-center text-white">تجربه کاربران</h1>
+            <h1 class="kalameh text-h4 text-center text-white q-my-xl">تجربه کاربران</h1>
           </div>
           <div class="row kalameh q-gutter-md justify-center text-white" style="direction: rtl;">
 
             <div class="col-12 col-md-5 ">
-              <q-card class="my-card text-body1" style="background-color: #1E1E1E;">
-                <q-card-section>
+              <q-card class="my-card text-body1 text-justify" style="background-color: #1E1E1E;">
+                <q-card-section style="line-height: 30px;">
                   "من از وبسایت "روزگفت" برای مطالعه مقالات و دسترسی به منابع در مورد سلامت روان استفاده می‌کنم و باید
                   بگویم که اطلاعاتی که ارائه می‌دهند بسیار کاربردی هستند. طراحی سایت هم بسیار زیبا و کاربرپسند است."
                 </q-card-section>
               </q-card>
             </div>
             <div class="col-12 col-md-5 ">
-              <q-card class="my-card text-body1" style="background-color: #1E1E1E;">
-                <q-card-section>
+              <q-card class="my-card text-body1 text-justify" style="background-color: #1E1E1E;">
+                <q-card-section style="line-height: 30px;">
                   "سرویس "روزگفت" برای من به عنوان یک جایگاه تخصصی برای مشاوره در زمینه سلامت روان ارزشمند بوده است. من با
                   یکی از مشاوران این سرویس کار کردم و تجربه بسیار مثبتی داشتم. اینجا برای من به یک فضای امن برای صحبت کردن
                   تبدیل شده است." </q-card-section>
               </q-card>
             </div>
             <div class="col-12 col-md-5 ">
-              <q-card class="my-card text-body1" style="background-color: #1E1E1E;">
-                <q-card-section>
+              <q-card class="my-card text-body1 text-justify" style="background-color: #1E1E1E;">
+                <q-card-section style="line-height: 30px;">
                   "سرویس "روزگفت" برای من تبدیل به یک منبع بسیار مفید برای بهبود سلامت روان شده است. مقالات آموزشی و
                   مشاوره‌های آنلاینی که ارائه می‌دهند، واقعاً کمکم کرده‌اند تا با چالش‌هایم در این زمینه بهتر کنار بیایم."
                 </q-card-section>
               </q-card>
             </div>
             <div class="col-12 col-md-5 ">
-              <q-card class="my-card text-body1" style="background-color: #1E1E1E;">
-                <q-card-section>
+              <q-card class="my-card text-body1 text-justify" style="background-color: #1E1E1E;">
+                <q-card-section style="line-height: 30px;">
                   من از "روزگفت" به عنوان یک منبع راهنمایی و پشتیبانی برای تغییرات مثبت در زندگی انسان‌ها بسیار مفید است.
                   من با تیم پشتیبانی ارتباط داشتم و آنها بسیار حرفه‌ای و دلسوز به من پاسخ دادند. این سرویس را به دیگران
                   نیز پیشنهاد می‌کنم."
@@ -143,6 +145,12 @@
 
         <!-- footer -->
         <div class="q-my-xl text-center kalameh text-white">
+
+          <div>
+            <q-input v-model="mobile" />
+            <q-btn @click="Send">ثبت نام</q-btn>
+          </div>
+
           <h6 class="" style="font-size: 15px; color: gray;">تمامی حقوق وبسایت متعلق به روزگفت می باشد.</h6>
         </div>
       </div>
@@ -153,14 +161,21 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
+import { api } from "src/boot/axios";
 
 export default defineComponent({
   name: 'IndexPage',
   setup() {
     const url = 'showcase.png';
     const group = 'group.png'
-    return { url, group }
+    const mobile = ref('');
+
+    function Send(){
+
+    }
+
+    return { url, group , mobile , Send }
   }
 })
 </script>
